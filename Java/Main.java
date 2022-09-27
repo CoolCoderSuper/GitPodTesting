@@ -4,6 +4,7 @@ import Person.Dog;
 import Person.FerocityLevel;
 import Person.SuperCoolPerson;
 import java.time.LocalTime;
+import java.util.Scanner;
 
 public class Main {
     static boolean javaCool = true;
@@ -91,6 +92,12 @@ public class Main {
         dog1.Level = FerocityLevel.HIGH;
         System.out.println(dog1.Level);
         System.out.println(dog1.Level.default_val());
+        //user input
+        Scanner objScanner = new Scanner(System.in);
+        System.out.println("Enter name: ");
+        String name = objScanner.nextLine();
+        System.out.println("Hello " + name);
+        objScanner.close();
     }
 
     private static void sleep(long millis){

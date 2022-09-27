@@ -4,3 +4,6 @@ def string_tests():
     print(test[-1])
     print(test)
     print(f"val: '{test}'")
+ 
+def print_string(string):
+   print(string)
