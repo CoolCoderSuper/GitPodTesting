@@ -8,9 +8,9 @@ import java.util.Scanner;
 
 public class Main {
     static boolean javaCool = true;
-    static  boolean vbCool = true;
-    static   boolean csCool = true;
-    static  boolean vbTheBest = false;
+    static boolean vbCool = true;
+    static boolean csCool = true;
+    static boolean vbTheBest = false;
     static boolean personCool;
     static boolean personSuperCool;
 

@@ -11,7 +11,7 @@ if a == "-add":
     item.Value = sys.argv[2]
     items.append(item)
 elif a == "-remove":
-    data.first(items, sys.argv[2])
+    items.remove(data.first(items, int(sys.argv[2])))
 elif a == "-list":
     print(json.dumps((data.serialize(items)), indent=4))
 data.save(data.serialize(items))
