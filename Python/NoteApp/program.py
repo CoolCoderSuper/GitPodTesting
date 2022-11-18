@@ -2,7 +2,6 @@ import sys
 import notes
 import data
 import json
-#TODO: Fix the delete
 data.init()
 items = list(data.deserialize(data.load()))
 a = sys.argv[1]
