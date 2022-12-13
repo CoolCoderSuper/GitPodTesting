@@ -1,0 +1,15 @@
+/workspaces/GitPodTesting/C#/Console/bin/Debug/net6.0/Console
+/workspaces/GitPodTesting/C#/Console/bin/Debug/net6.0/Console.deps.json
+/workspaces/GitPodTesting/C#/Console/bin/Debug/net6.0/Console.runtimeconfig.json
+/workspaces/GitPodTesting/C#/Console/bin/Debug/net6.0/Console.dll
+/workspaces/GitPodTesting/C#/Console/bin/Debug/net6.0/Console.pdb
+/workspaces/GitPodTesting/C#/Console/obj/Debug/net6.0/Console.csproj.AssemblyReference.cache
+/workspaces/GitPodTesting/C#/Console/obj/Debug/net6.0/Console.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/GitPodTesting/C#/Console/obj/Debug/net6.0/Console.AssemblyInfoInputs.cache
+/workspaces/GitPodTesting/C#/Console/obj/Debug/net6.0/Console.AssemblyInfo.cs
+/workspaces/GitPodTesting/C#/Console/obj/Debug/net6.0/Console.csproj.CoreCompileInputs.cache
+/workspaces/GitPodTesting/C#/Console/obj/Debug/net6.0/Console.dll
+/workspaces/GitPodTesting/C#/Console/obj/Debug/net6.0/refint/Console.dll
+/workspaces/GitPodTesting/C#/Console/obj/Debug/net6.0/Console.pdb
+/workspaces/GitPodTesting/C#/Console/obj/Debug/net6.0/Console.genruntimeconfig.cache
+/workspaces/GitPodTesting/C#/Console/obj/Debug/net6.0/ref/Console.dll
