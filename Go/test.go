@@ -1,13 +1,30 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
 func main(){
-	println(Hello("Joe"))
+    println("Enter name: ")
+    name := getUserInput()
+	println(Hello(name))
 }
 
-// Hello returns a greeting for the named person.
 func Hello(name string) string {
-    // Return a greeting that embeds the name in a message.
-    message := fmt.Sprintf("Hi, %v. Welcome!", name)
-    return message
+    return fmt.Sprintf("Hello, %v.", name)
+}
+
+func getUserInput() string {
+    scanner := bufio.NewScanner(os.Stdin)
+    input := ""
+    for scanner.Scan() {
+        curr := scanner.Text()
+        if curr[0] == '\n' {
+            break
+        }else {
+            input += curr
+        }
+    }
+    return input
 }
