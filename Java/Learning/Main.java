@@ -1,15 +1,8 @@
-import Person.Person;
-import Person.Animal;
-import Person.Dog;
-import Person.FerocityLevel;
-import Person.SuperCoolPerson;
+import Person.*;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.time.*;
+import java.util.*;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Main {
     static boolean testMode = false;
@@ -19,25 +12,57 @@ public class Main {
     static boolean vbTheBest = false;
     static boolean personCool;
     static boolean personSuperCool;
+    static boolean listTestMode = false;
+    static boolean hashMapTestMode = false;
+    static boolean hashSetTestMode = true;
 
     public static void main(String[] args) {
-        ArrayList<String> names = new ArrayList<String>();
-        names.add("Bob");
-        names.add("Joe");
-        names.add("Rob");
-        System.out.println(names);
-        System.out.println(names.get(0));
-        names.set(0, "Bill");
-        System.out.println(names.get(0));
-        System.out.println("loop");
-        for (String n : names){
-            System.out.println(n);
+        if (hashSetTestMode){
+            HashSet<String> set = new HashSet<String>();
+
         }
-        names.remove("Rob");
-        names.remove(0);
-        System.out.println(names);
-        System.out.println(names.size());
-        names.clear();
+        if (hashMapTestMode){
+            HashMap<String, String> map = new HashMap<String, String>();
+            map.put("joe", "Joseph");
+            map.put("bob", "Coder");
+            System.out.println(map);
+            System.out.println(map.size());
+            for (String valString : map.values()) {
+                System.out.println(valString);
+            }
+            for (String keyString : map.keySet()) {
+                System.out.println(String.format("Key: %s, Value: %s", keyString, map.get(keyString)));
+            }
+            var name = map.get("joe");
+            System.out.println(name);
+            map.remove("joe");
+            System.out.println(map);
+            map.put("joe", "Humus");
+            System.out.println(map);
+            map.put("joe", "Hello");
+            System.out.println(map);
+            map.putIfAbsent("joe", "Bye");
+            System.out.println(map);
+        }
+        if (listTestMode){
+            ArrayList<String> names = new ArrayList<String>();
+            names.add("Bob");
+            names.add("Joe");
+            names.add("Rob");
+            System.out.println(names);
+            System.out.println(names.get(0));
+            names.set(0, "Bill");
+            System.out.println(names.get(0));
+            System.out.println("loop");
+            for (String n : names){
+                System.out.println(n);
+            }
+            names.remove("Rob");
+            names.remove(0);
+            System.out.println(names);
+            System.out.println(names.size());
+            names.clear();
+        }
         if (testMode) {
             // print to console
             System.out.println("Welcome to Java!");
