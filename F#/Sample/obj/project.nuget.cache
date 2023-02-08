@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "g5nPkEO0c3vzyu3V4zYfe8u0cn1R7KUAQ/cHIdv0f9zxNZiW+saRrsTv7VpgmSE0K7te87174tpz6OPAceEy3g==",
+  "success": true,
+  "projectFilePath": "/workspaces/GitPodTesting/F#/Sample/Sample.fsproj",
+  "expectedPackageFiles": [
+    "/home/codespace/.nuget/packages/fsharp.core/6.0.6/fsharp.core.6.0.6.nupkg.sha512"
+  ],
+  "logs": []
+}
