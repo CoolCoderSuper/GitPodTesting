@@ -2,6 +2,7 @@ import Person.*;
 
 import java.time.*;
 import java.util.*;
+import java.util.stream.*;
 import java.io.*;
 import java.time.format.DateTimeFormatter;
 
@@ -19,24 +20,11 @@ public class Main {
     static boolean iteratorTest = false;
     static boolean exceptionTest = false;
     static boolean filesTest = false;
-    static boolean lambdaTest = true;
+    static boolean lambdaTest = false;
 
     public static void main(String[] args) {
         if (lambdaTest){
-            var list = new ArrayList<Integer>();
-            list.add(1);
-            list.add(2);
-            list.add(3);
-            list.add(4);
-            list.add(5);
-            /*list.forEach(x -> System.out.println(x));
-            list.removeIf(x -> {
-                System.out.println("Hi, " + x);
-                return x <= 2;
-            });*/
-            System.out.println(list);
-            var s = list.stream();
-            s.filter(x -> x > 2).forEach(x -> System.out.println(x));
+            LambdaTests();
         }
         if (filesTest){
             FileTests();
@@ -59,6 +47,26 @@ public class Main {
         if (testMode) {
             Tests();
         }
+    }
+
+    private static void LambdaTests() {
+        var list = new ArrayList<Integer>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+        System.out.println(list);
+        var sL = list.stream().filter(x -> x > 2).collect(Collectors.toList());
+        System.out.println(sL);
+        sL = list.stream().map(x -> x - 1).collect(Collectors.toList());
+        System.out.println(sL);
+        list.forEach(x -> System.out.println(x));
+        list.removeIf(x -> {
+            System.out.println("Hi, " + x);
+            return x <= 2;
+        });
+        System.out.println(list);
     }
 
     private static void FileTests() {
