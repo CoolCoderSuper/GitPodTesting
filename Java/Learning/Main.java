@@ -29,21 +29,17 @@ public class Main {
             list.add(3);
             list.add(4);
             list.add(5);
-            list.forEach(x -> System.out.println(x));
+            /*list.forEach(x -> System.out.println(x));
             list.removeIf(x -> {
                 System.out.println("Hi, " + x);
                 return x <= 2;
-            });
+            });*/
             System.out.println(list);
+            var s = list.stream();
+            s.filter(x -> x > 2).forEach(x -> System.out.println(x));
         }
         if (filesTest){
-            try {
-                var f = new File("/workspaces/GitPodTesting/Java/test.txt");
-                if (!f.exists())
-                    f.createNewFile();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            FileTests();
         }
         if (exceptionTest){
             ExceptionTests();
@@ -62,6 +58,16 @@ public class Main {
         }
         if (testMode) {
             Tests();
+        }
+    }
+
+    private static void FileTests() {
+        try {
+            var f = new File("/workspaces/GitPodTesting/Java/test.txt");
+            if (!f.exists())
+                f.createNewFile();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
