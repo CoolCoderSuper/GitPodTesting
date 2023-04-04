@@ -1,0 +1,17 @@
+/workspaces/GitPodTesting/C#/Notes/bin/Debug/net6.0/Notes
+/workspaces/GitPodTesting/C#/Notes/bin/Debug/net6.0/Notes.deps.json
+/workspaces/GitPodTesting/C#/Notes/bin/Debug/net6.0/Notes.runtimeconfig.json
+/workspaces/GitPodTesting/C#/Notes/bin/Debug/net6.0/Notes.dll
+/workspaces/GitPodTesting/C#/Notes/bin/Debug/net6.0/Notes.pdb
+/workspaces/GitPodTesting/C#/Notes/obj/Debug/net6.0/Notes.csproj.AssemblyReference.cache
+/workspaces/GitPodTesting/C#/Notes/obj/Debug/net6.0/Notes.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/GitPodTesting/C#/Notes/obj/Debug/net6.0/Notes.AssemblyInfoInputs.cache
+/workspaces/GitPodTesting/C#/Notes/obj/Debug/net6.0/Notes.AssemblyInfo.cs
+/workspaces/GitPodTesting/C#/Notes/obj/Debug/net6.0/Notes.csproj.CoreCompileInputs.cache
+/workspaces/GitPodTesting/C#/Notes/obj/Debug/net6.0/Notes.dll
+/workspaces/GitPodTesting/C#/Notes/obj/Debug/net6.0/refint/Notes.dll
+/workspaces/GitPodTesting/C#/Notes/obj/Debug/net6.0/Notes.pdb
+/workspaces/GitPodTesting/C#/Notes/obj/Debug/net6.0/Notes.genruntimeconfig.cache
+/workspaces/GitPodTesting/C#/Notes/obj/Debug/net6.0/ref/Notes.dll
+/workspaces/GitPodTesting/C#/Notes/obj/Debug/net6.0/Notes.csproj.CopyComplete
+/workspaces/GitPodTesting/C#/Notes/bin/Debug/net6.0/Newtonsoft.Json.dll

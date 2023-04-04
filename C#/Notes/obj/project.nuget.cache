@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "bSP7NjoWECnuLHSdloXiG425sMjafuQHy22tgWN3VRXdO/JU3AAPBL1fxQ5sHEAc1DMzsMsDqpHUCw6JglcOBA==",
+  "success": true,
+  "projectFilePath": "/workspaces/GitPodTesting/C#/Notes/Notes.csproj",
+  "expectedPackageFiles": [
+    "/home/codespace/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
