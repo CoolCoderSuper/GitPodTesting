@@ -23,6 +23,8 @@ pub fn type_testing() {
         gender: Gender::Male,
         age: 45
     };
+    let ib: &dyn Printable = &b;
+    ib.printt();
     b.printt();
     let v = vec![1, 2, 3];
     v.printt()

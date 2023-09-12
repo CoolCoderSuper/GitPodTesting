@@ -1,5 +1,6 @@
 {
     "rust-analyzer.linkedProjects": [
-        "Rust/hello_world/Cargo.toml"
+        "Rust/hello_world/Cargo.toml",
+        "./Rust/hello_world/Cargo.toml"
     ]
 }
