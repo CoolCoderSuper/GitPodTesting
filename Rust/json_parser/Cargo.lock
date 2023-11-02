@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "advent_code"
+name = "json_parser"
 version = "0.1.0"
