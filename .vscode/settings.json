@@ -2,6 +2,7 @@
     "rust-analyzer.linkedProjects": [
         "./Rust/hello_world/Cargo.toml",
         "./Rust/notes/Cargo.toml",
-        "./Rust/jokes/Cargo.toml"
+        "./Rust/jokes/Cargo.toml",
+        "./Rust/advent_code/Cargo.toml"
     ]
 }
