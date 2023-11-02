@@ -1,5 +1,3 @@
-use std::fs;
-
 use simple::*;
 use types::*;
 use threading::*;
