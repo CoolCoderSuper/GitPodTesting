@@ -186,7 +186,7 @@ impl Lexer {
     }
 
     fn match_true(&mut self) -> Option<SyntaxToken> {
-        if self.text[self.position..self.position + 4] == "true".to_string() {
+        if self.current() == 't' && self.peek(1) == 'r' && self.peek(2) == 'u' && self.peek(3) == 'e' {
             let start = self.position;
             self.skip(4);
             return Some(SyntaxToken {
@@ -199,7 +199,7 @@ impl Lexer {
     }
 
     fn match_false(&mut self) -> Option<SyntaxToken> {
-        if self.text[self.position..self.position + 5] == "false".to_string() {
+        if self.current() == 'f' && self.peek(1) == 'a' && self.peek(2) == 'l' && self.peek(3) == 's' && self.peek(4) == 'e' {
             let start = self.position;
             self.skip(5);
             return Some(SyntaxToken {
@@ -212,7 +212,7 @@ impl Lexer {
     }
 
     fn match_null(&mut self) -> Option<SyntaxToken> {
-        if self.text[self.position..self.position + 4] == "null".to_string() {
+        if self.current() == 'n' && self.peek(1) == 'u' && self.peek(2) == 'l' && self.peek(3) == 'l' {
             let start = self.position;
             self.skip(4);
             return Some(SyntaxToken {
