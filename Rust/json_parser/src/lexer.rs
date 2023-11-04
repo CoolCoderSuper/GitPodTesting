@@ -1,23 +1,18 @@
-use std::ops::Index;
-
 use crate::token::*;
 pub struct Lexer {
     text: String,
     position: usize,
-    chars: Vec<char>,
 }
-//TODO: Diagnostics
-//TODO: String escape
+
 impl Lexer {
     pub fn new(text: &str) -> Lexer {
         Lexer {
             text: text.to_string(),
             position: 0,
-            chars: text.chars().collect(),
         }
     }
 
-    fn current(&self) -> &char {
+    fn current(&self) -> char {
         self.peek(0)
     }
 
@@ -29,12 +24,12 @@ impl Lexer {
         self.position += offest
     }
 
-    fn peek(&self, offest: usize) -> &char {
+    fn peek(&self, offest: usize) -> char {
         let index = self.position + offest;
         if index >= self.text.len() {
-            return &'\0';
+            return '\0';
         }
-        self.chars.index(index)
+        self.text.chars().nth(index).unwrap()
     }
 
     pub fn lex(&mut self) -> SyntaxToken {
@@ -100,7 +95,7 @@ impl Lexer {
     }
 
     fn matches_eof(&self) -> bool {
-        self.current() == &'\0'
+        self.current() == '\0'
     }
 
     fn match_whitespace(&mut self) -> Option<SyntaxToken> {
@@ -119,7 +114,7 @@ impl Lexer {
     }
 
     fn match_openbrace(&mut self) -> Option<SyntaxToken> {
-        if self.current() == &'{' {
+        if self.current() == '{' {
             self.next();
             return Some(SyntaxToken {
                 text: '{'.to_string(),
@@ -131,7 +126,7 @@ impl Lexer {
     }
 
     fn match_closebrace(&mut self) -> Option<SyntaxToken> {
-        if self.current() == &'}' {
+        if self.current() == '}' {
             self.next();
             return Some(SyntaxToken {
                 text: '}'.to_string(),
@@ -143,7 +138,7 @@ impl Lexer {
     }
 
     fn match_openbracket(&mut self) -> Option<SyntaxToken> {
-        if self.current() == &'[' {
+        if self.current() == '[' {
             self.next();
             return Some(SyntaxToken {
                 text: '['.to_string(),
@@ -155,7 +150,7 @@ impl Lexer {
     }
 
     fn match_closebracket(&mut self) -> Option<SyntaxToken> {
-        if self.current() == &']' {
+        if self.current() == ']' {
             self.next();
             return Some(SyntaxToken {
                 text: ']'.to_string(),
@@ -167,7 +162,7 @@ impl Lexer {
     }
 
     fn match_comma(&mut self) -> Option<SyntaxToken> {
-        if self.current() == &',' {
+        if self.current() == ',' {
             self.next();
             return Some(SyntaxToken {
                 text: ','.to_string(),
@@ -179,7 +174,7 @@ impl Lexer {
     }
 
     fn match_colon(&mut self) -> Option<SyntaxToken> {
-        if self.current() == &':' {
+        if self.current() == ':' {
             self.next();
             return Some(SyntaxToken {
                 text: ':'.to_string(),
@@ -246,11 +241,11 @@ impl Lexer {
 
     fn matches_number(&self) -> bool {
         self.current().is_numeric()
-            || self.current() == &'-'
-            || self.current() == &'+'
-            || self.current() == &'.'
-            || self.current() == &'e'
-            || self.current() == &'E'
+            || self.current() == '-'
+            || self.current() == '+'
+            || self.current() == '.'
+            || self.current() == 'e'
+            || self.current() == 'E'
     }
 
     fn match_string(&mut self) -> Option<SyntaxToken> {
@@ -275,7 +270,7 @@ impl Lexer {
     }
 
     fn matches_string(&self) -> bool {
-        self.current() == &'"' || self.current() == &'\''
+        self.current() == '"' || self.current() == '\''
     }
 
     fn match_identifier(&mut self) -> Option<SyntaxToken> {
@@ -298,7 +293,7 @@ impl Lexer {
             let start = self.position;
             loop {
                 self.next();
-                if self.current() == &'\r' || self.current() == &'\n' || self.matches_eof() {
+                if self.current() == '\r' || self.current() == '\n' || self.matches_eof() {
                     break;
                 }
             }
@@ -312,7 +307,7 @@ impl Lexer {
     }
 
     fn matches_comment(&self) -> bool {
-        self.current() == &'/' && self.peek(1) == &'/'
+        self.current() == '/' && self.peek(1) == '/'
     }
 
     fn match_blockcomment(&mut self) -> Option<SyntaxToken> {
@@ -335,10 +330,10 @@ impl Lexer {
     }
 
     fn matches_opencomment(&self) -> bool {
-        self.current() == &'/' && self.peek(1) == &'*'
+        self.current() == '/' && self.peek(1) == '*'
     }
 
     fn matches_closecomment(&self) -> bool {
-        self.current() == &'*' && self.peek(1) == &'/'
+        self.current() == '*' && self.peek(1) == '/'
     }
 }
