@@ -314,7 +314,7 @@ impl Lexer {
         if self.matches_opencomment() {
             let start = self.position;
             self.skip(2);
-            while !self.matches_closecomment() && self.matches_eof() {
+            while !self.matches_closecomment() && !self.matches_eof() {
                 self.next();
             }
             if self.matches_closecomment() {
